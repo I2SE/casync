@@ -1,8 +1,8 @@
 Source: casync
 Section: utils
 Priority: optional
-Build-Depends: debhelper (>= 10.3),
- meson (>= 0.40),
+Build-Depends: debhelper (>= 10.2),
+ meson (>= 0.37),
  pkg-config,
  liblzma-dev (>= 5.1.0),
  libcurl4-gnutls-dev (>= 7.32.0) | libcurl-dev,
