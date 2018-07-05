@@ -1,0 +1,4 @@
+Tests: upstream
+Depends: @builddeps@
+Restrictions: needs-root, rw-build-tree, allow-stderr
+

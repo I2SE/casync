@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -ex
+
+DEB_BUILD_OPTIONS="nocheck $DEB_BUILD_OPTIONS" dpkg-buildpackage --target build
+
+export MESON_TESTTHREADS=1
+
+for dir in obj-* ; do
+	ninja -v -C $dir test
+done

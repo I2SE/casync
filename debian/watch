@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/casync-$1\.tar\.gz/ \
+  https://github.com/systemd/casync/tags .*/v?(\d\S*)\.tar\.gz

@@ -1,0 +1,62 @@
+casync (2+61.20180112-1) unstable; urgency=medium
+
+  * New upstream version 2+61.20180112
+    - Drop patches (applied upstream)
+    - Add new libudev dependency
+    - Fixes build with glibc 2.26 (Closes: #887692)
+
+ -- Felipe Sateler <fsateler@debian.org>  Sat, 27 Jan 2018 10:15:19 -0300
+
+casync (2-1) unstable; urgency=medium
+
+  * New upstream version 2
+    - Add new build-dependencies zstd and zlib for alternative compressors
+  * Remove bogus Closes tag
+  * Fix formatting error in casync.rst.
+    This error caused a broken manpage
+  * Install README and NEWS files
+
+ -- Felipe Sateler <fsateler@debian.org>  Wed, 02 Aug 2017 12:01:16 -0400
+
+casync (1+92-1) unstable; urgency=medium
+
+  * New upstream version 1+92
+    - Includes undefined behavior fixes (Closes: #869136)
+  * Drop unused libgrypt-dev build-dependency.
+    Upstream moved to openssl
+  * Use ninja instead of meson to run tests (Closes: #869531)
+
+ -- Felipe Sateler <fsateler@debian.org>  Mon, 24 Jul 2017 09:05:28 -0400
+
+casync (1+65-2) unstable; urgency=medium
+
+  * Restrict architecture to linux-any.
+    While upstream has indicated it is willing to accept patches for other
+    architectures, currently only linux is supported. (Closes: #869134)
+  * Run tests in serially instead of in parallel
+  * Bump test timeouts to 3 minutes. (Closes: #869140)
+
+ -- Felipe Sateler <fsateler@debian.org>  Thu, 20 Jul 2017 21:11:37 -0400
+
+casync (1+65-1) unstable; urgency=medium
+
+  * Initial release for debian (Closes: #868980).
+    - Import upstream git snapshot
+  * Bump debhelper compat to 10, make use of builtin meson support
+  * Set pkg-systemd as maintainer, and add myself as uploader
+  * Bump standards version
+  * Enable compiler hardening features
+  * Add gbp config file
+  * Add Vcs-* header
+  * Add missing Build-Depends on openssl and sphinx
+  * Force UTF-8 for building
+    - Otherwise sphinx might choke
+  * Add an autopkgtest running upstream tests as root
+
+ -- Felipe Sateler <fsateler@debian.org>  Wed, 19 Jul 2017 20:50:52 -0400
+
+casync (1-0ppa1) zesty; urgency=medium
+
+  * Initial release.
+
+ -- Martin Pitt <mpitt@debian.org>  Thu, 08 Jun 2017 15:11:36 +0200

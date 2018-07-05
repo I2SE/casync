@@ -1,0 +1,41 @@
+Source: casync
+Section: utils
+Priority: optional
+Build-Depends: debhelper (>= 10.3),
+ meson (>= 0.40),
+ pkg-config,
+ liblzma-dev (>= 5.1.0),
+ libcurl4-gnutls-dev (>= 7.32.0) | libcurl-dev,
+ libssl-dev | libssl1.0-dev,
+ libudev-dev,
+ libzstd-dev,
+ zlib1g-dev,
+ libacl1-dev | acl-dev,
+ libfuse-dev (>= 2.6),
+ python3-sphinx,
+ rsync <!nocheck>
+Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
+Uploaders: Martin Pitt <mpitt@debian.org>,
+ Felipe Sateler <fsateler@debian.org>
+Homepage: https://github.com/systemd/casync
+Standards-Version: 4.0.0
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/casync.git
+Vcs-Browser: https://anonscm.debian.org/git/collab-maint/casync.git
+
+Package: casync
+Architecture: linux-any
+Depends: ${shlibs:Depends},
+ ${misc:Depends}
+Description: content addressable data synchronizer
+ casync is
+ .
+ 1. A combination of the rsync algorithm and content-addressable storage
+ 2. An efficient way to store and retrieve multiple related versions of
+    large file systems or directory trees
+ 3. An efficient way to deliver and update OS and container images over
+    the Internet
+ 4. An efficient backup system
+ .
+ casync uses well-known concepts implemented in a variety of other projects
+ (primarily git and rsync), and puts them together in a moderately new, nice
+ way.
